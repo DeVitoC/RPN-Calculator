@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E273E0EE2450A4380077E51D /* RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273E0E42450A4370077E51D /* RPN.framework */; };
-		E273E0F32450A4380077E51D /* RPNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E0F22450A4380077E51D /* RPNTests.swift */; };
 		E273E0F52450A4380077E51D /* RPN.h in Headers */ = {isa = PBXBuildFile; fileRef = E273E0E72450A4370077E51D /* RPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E273E10F2450A7700077E51D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E10E2450A7700077E51D /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +27,7 @@
 		E273E0E72450A4370077E51D /* RPN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPN.h; sourceTree = "<group>"; };
 		E273E0E82450A4370077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E273E0ED2450A4380077E51D /* RPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E273E0F22450A4380077E51D /* RPNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPNTests.swift; sourceTree = "<group>"; };
-		E273E0F42450A4380077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E273E10E2450A7700077E51D /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +53,6 @@
 			isa = PBXGroup;
 			children = (
 				E273E0E62450A4370077E51D /* RPN */,
-				E273E0F12450A4380077E51D /* RPNTests */,
 				E273E0E52450A4370077E51D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,17 +71,9 @@
 			children = (
 				E273E0E72450A4370077E51D /* RPN.h */,
 				E273E0E82450A4370077E51D /* Info.plist */,
+				E273E10E2450A7700077E51D /* Stack.swift */,
 			);
 			path = RPN;
-			sourceTree = "<group>";
-		};
-		E273E0F12450A4380077E51D /* RPNTests */ = {
-			isa = PBXGroup;
-			children = (
-				E273E0F22450A4380077E51D /* RPNTests.swift */,
-				E273E0F42450A4380077E51D /* Info.plist */,
-			);
-			path = RPNTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +138,7 @@
 				TargetAttributes = {
 					E273E0E32450A4370077E51D = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 					E273E0EC2450A4380077E51D = {
 						CreatedOnToolsVersion = 11.4.1;
@@ -195,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E273E10F2450A7700077E51D /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +194,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E273E0F32450A4380077E51D /* RPNTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +331,7 @@
 		E273E0F92450A4380077E51D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8825K9HH49;
@@ -356,6 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.christopherdevito.RPN;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +357,7 @@
 		E273E0FA2450A4380077E51D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8825K9HH49;
@@ -388,6 +382,7 @@
 		E273E0FC2450A4380077E51D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8825K9HH49;
 				INFOPLIST_FILE = RPNTests/Info.plist;
@@ -406,6 +401,7 @@
 		E273E0FD2450A4380077E51D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8825K9HH49;
 				INFOPLIST_FILE = RPNTests/Info.plist;
