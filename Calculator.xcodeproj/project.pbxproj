@@ -13,6 +13,8 @@
 		E273E0B22450A35E0077E51D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B02450A35E0077E51D /* Main.storyboard */; };
 		E273E0B42450A3660077E51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B32450A3660077E51D /* Assets.xcassets */; };
 		E273E0B72450A3660077E51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B52450A3660077E51D /* LaunchScreen.storyboard */; };
+		E273E1092450A5820077E51D /* RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273E1052450A4F40077E51D /* RPN.framework */; };
+		E273E10A2450A5820077E51D /* RPN.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E273E1052450A4F40077E51D /* RPN.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +46,28 @@
 			remoteGlobalIDString = E273E0ED2450A4380077E51D;
 			remoteInfo = RPNTests;
 		};
+		E273E10C2450A5D70077E51D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273E0FF2450A4F40077E51D /* RPN.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E273E0E32450A4370077E51D;
+			remoteInfo = RPN;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E273E10B2450A5820077E51D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E273E10A2450A5820077E51D /* RPN.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E273E0A72450A35E0077E51D /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E273E1092450A5820077E51D /* RPN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +115,7 @@
 				E273E0A92450A35E0077E51D /* Calculator */,
 				E273E0FE2450A4DE0077E51D /* Framework */,
 				E273E0A82450A35E0077E51D /* Products */,
+				E273E1082450A5820077E51D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +160,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E273E1082450A5820077E51D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,10 +177,12 @@
 				E273E0A32450A35E0077E51D /* Sources */,
 				E273E0A42450A35E0077E51D /* Frameworks */,
 				E273E0A52450A35E0077E51D /* Resources */,
+				E273E10B2450A5820077E51D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E273E10D2450A5D70077E51D /* PBXTargetDependency */,
 			);
 			name = Calculator;
 			productName = Calculator;
@@ -321,6 +355,11 @@
 			isa = PBXTargetDependency;
 			target = E273E0A62450A35E0077E51D /* Calculator */;
 			targetProxy = E273E0C92450A3670077E51D /* PBXContainerItemProxy */;
+		};
+		E273E10D2450A5D70077E51D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RPN;
+			targetProxy = E273E10C2450A5D70077E51D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
