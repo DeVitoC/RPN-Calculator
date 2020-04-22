@@ -9,7 +9,7 @@
 import UIKit
 import RPN
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var textField: UITextField!
     
@@ -80,5 +80,13 @@ class CalculatorViewController: UIViewController {
     @IBAction func divideAccumulatedResults(_ sender: UIButton) {
         calculator.push(operator: .divide)
     }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        calculator.clearStack()
+        digitAccumulator.clear()
+        return true
+    }
 }
+
+
 
