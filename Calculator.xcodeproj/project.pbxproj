@@ -113,7 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				E273E0A92450A35E0077E51D /* Calculator */,
-				E273E0FE2450A4DE0077E51D /* Framework */,
 				E273E0A82450A35E0077E51D /* Products */,
 				E273E1082450A5820077E51D /* Frameworks */,
 			);
@@ -143,14 +142,6 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		E273E0FE2450A4DE0077E51D /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				E273E0FF2450A4F40077E51D /* RPN.xcodeproj */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
 		E273E1002450A4F40077E51D /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +154,7 @@
 		E273E1082450A5820077E51D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E273E0FF2450A4F40077E51D /* RPN.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
