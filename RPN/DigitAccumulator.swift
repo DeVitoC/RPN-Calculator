@@ -24,6 +24,8 @@ public struct DigitAccumulator {
         case number(Int)
     }
     
+    public init() { }
+    
     /// Add a new digit to the accumulator. Throws an error if the digit is invalid.
     /// - Parameter digit: The digit to add.
     /// - Throws: `DigitAccumulatorError`
