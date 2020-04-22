@@ -10,6 +10,7 @@
 		E273E0EE2450A4380077E51D /* RPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E273E0E42450A4370077E51D /* RPN.framework */; };
 		E273E0F52450A4380077E51D /* RPN.h in Headers */ = {isa = PBXBuildFile; fileRef = E273E0E72450A4370077E51D /* RPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E273E10F2450A7700077E51D /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E10E2450A7700077E51D /* Stack.swift */; };
+		E273E1112450AE790077E51D /* DigitAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E1102450AE790077E51D /* DigitAccumulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +29,7 @@
 		E273E0E82450A4370077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E273E0ED2450A4380077E51D /* RPNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E273E10E2450A7700077E51D /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		E273E1102450AE790077E51D /* DigitAccumulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitAccumulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E273E0E72450A4370077E51D /* RPN.h */,
 				E273E0E82450A4370077E51D /* Info.plist */,
 				E273E10E2450A7700077E51D /* Stack.swift */,
+				E273E1102450AE790077E51D /* DigitAccumulator.swift */,
 			);
 			path = RPN;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E273E1112450AE790077E51D /* DigitAccumulator.swift in Sources */,
 				E273E10F2450A7700077E51D /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

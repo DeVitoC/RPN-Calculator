@@ -12,7 +12,7 @@ import Foundation
 /// A simple data type for representing elements as a "stack" of things
 struct Stack<Element>: ExpressibleByArrayLiteral {
     
-    var elements: [Element]
+    private(set) var elements: [Element]
     typealias ArrayLiteralElement = Element
     
     init(arrayLiteral elements: Element...) {
@@ -22,18 +22,18 @@ struct Stack<Element>: ExpressibleByArrayLiteral {
     /// Add things to the top of the stack.
     /// - Parameter element: The element to be added to the top of the stack.
     mutating func push(_ element: Element) {
-        
+        elements.append(element)
     }
     
     /// Remove the most recent item from the stack.
     /// - Returns: The element that was removed, or `nil` if there were no elements left.
     mutating func pop() -> Element? {
-        
+        return elements.popLast()
     }
     
     /// Take a look at what the most recent element added to the stack was.
     /// - Returns: The most recent element added to the stack.
     func peek() -> Element? {
-        
+        return elements.last
     }
 }
