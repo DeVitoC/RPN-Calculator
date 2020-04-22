@@ -17,6 +17,8 @@ enum DigitAccumulatorError: Error {
 /// Collects and accumulates digits into a number.
 struct DigitAccumulator {
     
+    var digits: [Digit] = []
+    
     enum Digit: Equatable {
         case decimalPoint
         case number(Int)
@@ -26,17 +28,37 @@ struct DigitAccumulator {
     /// - Parameter digit: The digit to add.
     /// - Throws: `DigitAccumulatorError`
     mutating func add(digit: Digit) throws {
+        switch digit {
+        case .number(let value):
+            guard value >= 0 && value <= 9 else {
+                throw DigitAccumulatorError.invalidNumberValue
+            }
+        case .decimalPoint:
+            guard !digits.contains(.decimalPoint) else {
+                throw DigitAccumulatorError.extraDecimalPoint
+            }
+        }
         
+        digits.append(digit)
     }
     
     /// The current value in the Digit Accumulator, or `nil` if it can't be interpreted as a `Double`.
     var value: Double? {
+        let stringValue = digits.reduce("") { (previousResult, newDigit) -> String in
+            switch newDigit {
+            case .number(let value):
+                return previousResult + String(value)
+            case .decimalPoint:
+                return previousResult + "."
+            }
+        }
         
+        return Double(stringValue)
     }
     
     /// Reset the accumulator.
     mutating func clear() {
-        
+        digits.removeAll()
     }
     
 }
