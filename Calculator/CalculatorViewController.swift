@@ -48,6 +48,37 @@ class CalculatorViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func enterNumericDigit(_ sender: UIButton) {
+        let numericDigit = sender.tag
+        try? digitAccumulator.add(digit: .number(numericDigit))
+    }
+    
+    @IBAction func enterDecimal(_ sender: UIButton) {
+        try? digitAccumulator.add(digit: .decimalPoint)
+    }
+    
+    @IBAction func saveNumberToCalculator(_ sender: UIButton) {
+        if let value = digitAccumulator.value {
+            calculator.push(value)
+        }
+        
+        digitAccumulator.clear()
+    }
+    
+    @IBAction func addAccumulatedResults(_ sender: UIButton) {
+        calculator.push(operator: .add)
+    }
+    
+    @IBAction func subtractAccumulatedResults(_ sender: UIButton) {
+        calculator.push(operator: .subtract)
+    }
+    
+    @IBAction func multiplyAccumulatedResults(_ sender: UIButton) {
+        calculator.push(operator: .multiply)
+    }
+    
+    @IBAction func divideAccumulatedResults(_ sender: UIButton) {
+        calculator.push(operator: .divide)
+    }
 }
 
