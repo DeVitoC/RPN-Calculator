@@ -13,8 +13,6 @@
 		E273E0B22450A35E0077E51D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B02450A35E0077E51D /* Main.storyboard */; };
 		E273E0B42450A3660077E51D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B32450A3660077E51D /* Assets.xcassets */; };
 		E273E0B72450A3660077E51D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E273E0B52450A3660077E51D /* LaunchScreen.storyboard */; };
-		E273E0C22450A3670077E51D /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E0C12450A3670077E51D /* CalculatorTests.swift */; };
-		E273E0CD2450A3670077E51D /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E273E0CC2450A3670077E51D /* CalculatorUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +30,20 @@
 			remoteGlobalIDString = E273E0A62450A35E0077E51D;
 			remoteInfo = Calculator;
 		};
+		E273E1042450A4F40077E51D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273E0FF2450A4F40077E51D /* RPN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E273E0E42450A4370077E51D;
+			remoteInfo = RPN;
+		};
+		E273E1062450A4F40077E51D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E273E0FF2450A4F40077E51D /* RPN.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E273E0ED2450A4380077E51D;
+			remoteInfo = RPNTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -44,11 +56,8 @@
 		E273E0B62450A3660077E51D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E273E0B82450A3660077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E273E0BD2450A3670077E51D /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E273E0C12450A3670077E51D /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
-		E273E0C32450A3670077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E273E0C82450A3670077E51D /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E273E0CC2450A3670077E51D /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
-		E273E0CE2450A3670077E51D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E273E0FF2450A4F40077E51D /* RPN.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = RPN.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				E273E0A92450A35E0077E51D /* Calculator */,
-				E273E0C02450A3670077E51D /* CalculatorTests */,
-				E273E0CB2450A3670077E51D /* CalculatorUITests */,
+				E273E0FE2450A4DE0077E51D /* Framework */,
 				E273E0A82450A35E0077E51D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -110,22 +118,21 @@
 			path = Calculator;
 			sourceTree = "<group>";
 		};
-		E273E0C02450A3670077E51D /* CalculatorTests */ = {
+		E273E0FE2450A4DE0077E51D /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				E273E0C12450A3670077E51D /* CalculatorTests.swift */,
-				E273E0C32450A3670077E51D /* Info.plist */,
+				E273E0FF2450A4F40077E51D /* RPN.xcodeproj */,
 			);
-			path = CalculatorTests;
+			path = Framework;
 			sourceTree = "<group>";
 		};
-		E273E0CB2450A3670077E51D /* CalculatorUITests */ = {
+		E273E1002450A4F40077E51D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E273E0CC2450A3670077E51D /* CalculatorUITests.swift */,
-				E273E0CE2450A3670077E51D /* Info.plist */,
+				E273E1052450A4F40077E51D /* RPN.framework */,
+				E273E1072450A4F40077E51D /* RPNTests.xctest */,
 			);
-			path = CalculatorUITests;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +225,12 @@
 			mainGroup = E273E09E2450A35D0077E51D;
 			productRefGroup = E273E0A82450A35E0077E51D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E273E1002450A4F40077E51D /* Products */;
+					ProjectRef = E273E0FF2450A4F40077E51D /* RPN.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E273E0A62450A35E0077E51D /* Calculator */,
@@ -226,6 +239,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E273E1052450A4F40077E51D /* RPN.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RPN.framework;
+			remoteRef = E273E1042450A4F40077E51D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E273E1072450A4F40077E51D /* RPNTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RPNTests.xctest;
+			remoteRef = E273E1062450A4F40077E51D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E273E0A52450A35E0077E51D /* Resources */ = {
@@ -269,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E273E0C22450A3670077E51D /* CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +306,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E273E0CD2450A3670077E51D /* CalculatorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
